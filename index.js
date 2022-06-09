@@ -1,14 +1,14 @@
-const isPalindrome = (word) => {
-  let arr = []
-  for (let i = word.length - 1; i >= 0; i--) {
-    arr.push(word[i]);
-  }
-  let reversed = arr.join("")
- const isWordPalindrome = word === reversed ? true : false;
- console.log(isPalindrome)
- return isWordPalindrome;
-}
-isPalindrome("awe")
+// const isPalindrome = (word) => {
+//   let arr = []
+//   for (let i = word.length - 1; i >= 0; i--) {
+//     arr.push(word[i]);
+//   }
+//   let reversed = arr.join("")
+//   const isWordPalindrome = word === reversed ? true : false;
+//   console.log(isPalindrome)
+//   return isWordPalindrome;
+// }
+// isPalindrome("awe")
 
 /* 
   Add your pseudocode here
@@ -31,3 +31,21 @@ if (require.main === module) {
 }
 
 // module.exports = isPalindrome;
+
+
+function isPalindrome(str) {
+  const strArr = str.split("")
+  const strReversedArr = str.split("").reverse()
+  let a = 0;
+  for (let i in strReversedArr) {
+    if (strReversedArr[i] === strArr[i]) {
+      a++
+    }
+  }
+  if (a === strArr.length) {
+    return true
+  }
+  else {
+    return false
+  }
+}
